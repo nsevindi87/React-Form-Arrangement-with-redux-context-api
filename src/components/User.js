@@ -1,14 +1,9 @@
 import { Component } from 'react'
-import PropTypes from 'prop-types'
-import { isVisible } from '@testing-library/user-event/dist/utils';
+import PropTypes from 'prop-types';
 
 
 class User extends Component {
-  static defaultProps = { //burada da yazilabilir. Normalde alt kisimda yazilir.
-    name : "Bilgi Yok",
-    department : "Bilgi Yok",
-    salary : "Bilgi Yok"
-  }
+  
 
   constructor(props){
     super(props);
@@ -53,7 +48,14 @@ class User extends Component {
 User.prototypes = {
   name : PropTypes.string.isRequired,
   department : PropTypes.string.isRequired,
-  salary : PropTypes.string.isRequired
+  salary : PropTypes.string.isRequired,
+  id : PropTypes.number.isRequired,
+}
+
+User.defaultProps = { //burada da yazilabilir. Normalde alt kisimda yazilir.
+  name : "Bilgi Yok",
+  department : "Bilgi Yok",
+  salary : "Bilgi Yok"
 }
 
 export default User;
